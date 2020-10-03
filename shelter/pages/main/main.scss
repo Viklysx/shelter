@@ -36,11 +36,22 @@ $color-primary-light: #FDDCC4;
     font: {
         family: Georgia;
         style: normal;
-        size: 2rem;
+        size: 1.25rem;
         weight: 400;
     }
     line-height: 115%;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.06em;
+}
+
+@mixin wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+@mixin flex-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
@@ -122,7 +133,6 @@ $color-primary-light: #FDDCC4;
 }
 
 .list__link:hover {
-    border-bottom: solid 3px $primary-color;
     color: $color-light-xl;
     cursor: pointer;
 }
@@ -193,6 +203,7 @@ $color-primary-light: #FDDCC4;
     cursor: pointer;
 }
 
+
 .about {
     display: flex;
     justify-content: center;
@@ -203,13 +214,18 @@ $color-primary-light: #FDDCC4;
     margin: 5rem 7.5rem 6.25rem 0rem;
 }
 
-.main-block {
-    max-width: 75rem;
-    margin: 0 auto;
+.main-block-first {
+    @include wrapper;
+    height: 36.75rem;
 }
 
 h3 {
     @include h3;
+    color: $color-dark-l;
+}
+
+h4 {
+    @include h4;
     color: $color-dark-l;
 }
 
@@ -224,4 +240,158 @@ h3 {
 .about__paragraph {
     width: 23.125rem;
     margin-top: 5.875rem;
+}
+
+.our-friends {
+    background: $color-light-l;
+}
+
+.our-friends__wrapper {
+    @include wrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0rem 6.25rem 0rem;  
+    height: 54.8125rem;
+}
+
+.our-friends__paragraph {
+    width: 25rem;
+    text-align: center;
+}
+
+.our-friends__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.75rem 0rem;
+}
+
+.our-friends__card:hover {
+    cursor: pointer;
+    background: $color-light-xl;
+}
+
+.our-friends__arrow {
+    @include flex-content;
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 0.125rem solid $primary-color;
+    box-sizing: border-box;
+    border-radius: 6.25rem;
+}
+
+.our-friends__arrow:hover, .our-friends__card--button:hover {
+    cursor: pointer;
+    background: $color-primary-light;
+    border-color: $color-primary-light;
+}
+
+.our-friends__card {
+    width: 16.875rem;
+    height: 27.1875rem;
+    background: $color-light-s;
+    border-radius: 0.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.875rem;
+    margin: 0rem 3.3125rem;
+}
+
+.our-friends__card img {
+    border-radius: 0.5625rem 0.5625rem 0rem 0rem;
+    margin-bottom: 1.875rem;   
+}
+
+.our-friends__card--text {
+    font-family: Georgia;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    margin-bottom: 1.875rem;
+}
+
+.our-friends__card--button {
+    @include flex-content;
+    width: 11.6875rem;
+    height: 3.25rem;
+    padding: 0.9375rem;
+    border: 0.125rem solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 6.25rem;
+    font-family: Georgia;
+    font-size: 1.0625rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    background: $color-light-s;
+}
+
+.rotate {
+    transform: rotate(-180deg);
+}
+
+.card-one, .card-two {
+    margin-right: 5.625rem;
+}
+
+.card-three, .card-two {
+    margin-left: 0rem;
+}
+
+.but-our-friends {
+    margin-top: 0rem;
+    width: 16.3125rem;
+}
+
+.help {
+    @include wrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 38.1875rem;
+    padding: 5rem 0rem 6.25rem 0rem; 
+}
+
+.help h3 {
+    text-align: center;
+}
+
+.help__items {
+    margin-top: 1.875rem;
+    // margin: 1.875rem 5.4375rem 0rem 5.4375rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.help__items--element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 7.5rem;
+}
+
+.help__items--element:last-of-type {
+    margin-right: 0rem;
+}
+
+.help__items--element:nth-child(5) {
+    margin-right: 0rem;
+}
+
+.help__items--element img {
+    margin-bottom: 1.875rem;
+    margin-top: 1.875rem;
+}
+
+.help__items--element:nth-child(6) img,
+.help__items--element:nth-child(7) img,
+.help__items--element:nth-child(8) img,
+.help__items--element:nth-child(9) img {
+    margin-top: 3.4375rem;
 }
