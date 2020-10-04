@@ -43,6 +43,18 @@ $color-primary-light: #FDDCC4;
     letter-spacing: 0.06em;
 }
 
+@mixin h5 {
+    font: {
+        family: Georgia;
+        style: normal;
+        size: 0.9375rem;
+        weight: 400;
+    }
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
 @mixin wrapper {
     max-width: 75rem;
     margin: 0 auto;
@@ -229,6 +241,10 @@ h4 {
     color: $color-dark-l;
 }
 
+h5 {
+    @include h5;
+}
+
 .about p {
     margin-top: 1.5625rem;
     font-family: Arial;
@@ -394,4 +410,119 @@ h4 {
 .help__items--element:nth-child(8) img,
 .help__items--element:nth-child(9) img {
     margin-top: 3.4375rem;
+}
+
+.addition {
+    height: 29rem;
+    background: $color-light-l;
+}
+
+.addition__wrapper {
+    @include wrapper;
+    display: flex;
+    align-items: center;
+    padding-top: 5.1rem;
+}
+
+.addition__wrapper h3 {
+    width: 18.75rem;
+}
+
+.addition__wrapper h5 {
+    margin: 1.25rem 0rem;
+}
+
+.addition__wrapper img {
+    margin-left: 8.875rem;
+    margin-right: 1.875rem;
+}
+
+.addition__number-cards {
+    text-decoration: none;
+    background: $primary-color;
+    border-radius: 9px;
+    width: 21.8125rem;
+    height: 2.6875rem;
+    @include flex-content;
+}
+
+.addition__number-cards:hover {
+    cursor: pointer;
+}
+
+.addition__number-cards img {
+    margin-left: 0rem;
+    margin-right: 0.9375rem;
+}
+
+.addition__description {
+    font-family: Arial;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: $color-dark-m;
+    margin-top: 1.25rem;
+    width: 23.75rem;
+}
+
+footer {
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer__wrapper {
+    @include wrapper;
+    padding-top: 2.5rem;   
+    height: 21.875rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__wrapper h3 {
+    color: $color-light-xl; 
+    margin-top: 1rem;   
+}
+
+.footer__wrapper-questions {
+    display: flex;
+    flex-direction: column;  
+    margin-right: 10rem;  
+}
+
+.footer__wrapper-questions-element {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.footer__wrapper-questions-element h4 {
+    color: $primary-color;
+}
+
+.footer__wrapper-questions-element img {
+    margin-right: 1.25rem;
+}
+
+.footer-two {
+    width: 18.875rem;
+}
+
+.footer-one {
+    width: 17.375rem;
+}
+
+.footer-header {
+    font-size: 2.18rem;
+}
+
+.visit {
+    margin-top: 2.125rem;
+}
+
+.addres {
+    margin-top: 2rem
+}
+
+a {
+    text-decoration: none;
 }

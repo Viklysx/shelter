@@ -221,6 +221,16 @@ h4 {
   color: #545454;
 }
 
+h5 {
+  font-family: Georgia;
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
 .about p {
   margin-top: 1.5625rem;
   font-family: Arial;
@@ -450,5 +460,147 @@ h4 {
 .help__items--element:nth-child(8) img,
 .help__items--element:nth-child(9) img {
   margin-top: 3.4375rem;
+}
+
+.addition {
+  height: 29rem;
+  background: #F6F6F6;
+}
+
+.addition__wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5.1rem;
+}
+
+.addition__wrapper h3 {
+  width: 18.75rem;
+}
+
+.addition__wrapper h5 {
+  margin: 1.25rem 0rem;
+}
+
+.addition__wrapper img {
+  margin-left: 8.875rem;
+  margin-right: 1.875rem;
+}
+
+.addition__number-cards {
+  text-decoration: none;
+  background: #F1CDB3;
+  border-radius: 9px;
+  width: 21.8125rem;
+  height: 2.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addition__number-cards:hover {
+  cursor: pointer;
+}
+
+.addition__number-cards img {
+  margin-left: 0rem;
+  margin-right: 0.9375rem;
+}
+
+.addition__description {
+  font-family: Arial;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: #B2B2B2;
+  margin-top: 1.25rem;
+  width: 23.75rem;
+}
+
+footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer__wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  height: 21.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__wrapper h3 {
+  color: #FFFFFF;
+  margin-top: 1rem;
+}
+
+.footer__wrapper-questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 10rem;
+}
+
+.footer__wrapper-questions-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+.footer__wrapper-questions-element h4 {
+  color: #F1CDB3;
+}
+
+.footer__wrapper-questions-element img {
+  margin-right: 1.25rem;
+}
+
+.footer-two {
+  width: 18.875rem;
+}
+
+.footer-one {
+  width: 17.375rem;
+}
+
+.footer-header {
+  font-size: 2.18rem;
+}
+
+.visit {
+  margin-top: 2.125rem;
+}
+
+.addres {
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
