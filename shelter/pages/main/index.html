@@ -43,6 +43,9 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="burger">
+                    <img src="../../assets/images/burger.png">
+                </div>
             </div>
         </header>
         <main class="main">
@@ -58,7 +61,7 @@
                                 heart.
                                 He or she will love you more than anybody else in the world, you will see!
                             </p>
-                            <button type="button" class="content-section__button">
+                            <button type="button" class="content-section__button mobile-but">
                                 Make a friend
                             </button>
                         </div>
@@ -71,10 +74,10 @@
     <main class="main-block">
         <div class="main-block-first">
             <div class="about">
-                <div>
+                <div class="about-img">
                     <img src="../../assets/images/about-pets.svg" alt="about-pets">
                 </div>
-                <div>
+                <div class="about-wrapper-text">
                     <div class="about__paragraph">
                         <h3>
                             About the shelter “Cozy House”
@@ -107,9 +110,9 @@
                     </h3>
                 </div>
                 <div class="our-friends__cards">
-                    <div class="our-friends__arrow">
+                    <button class="our-friends__arrow mob-arrow">
                         <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
-                    </div>
+                    </button>
                     <div class="our-friends__card card-one">
                         <img src="../../assets/images/pets-katrine.svg" alt="pets-katrine">
                         <p class="our-friends__card--text">Katrine</p>
@@ -131,9 +134,17 @@
                             Learn more
                         </button>
                     </div>
-                    <div class="our-friends__arrow rotate">
+                    <button class="our-friends__arrow rotate mob-arrow">
                         <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
-                    </div>
+                    </button>
+                </div>
+                <div class="our-friends-mob-arrow">
+                    <button class="our-friends__arrow">
+                        <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
+                    </button>
+                    <button class="our-friends__arrow rotate">
+                        <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
+                    </button>
                 </div>
                 <button type="button" class="content-section__button but-our-friends">
                     Get to know the rest
@@ -190,10 +201,10 @@
         <div class="addition">
             <div class="addition__wrapper">
                 <div>
-                    <img src="../../assets/images/donation-dog.svg" alt="donation-dog">
+                    <img class="donation-dog" src="../../assets/images/donation-dog.svg" alt="donation-dog">
                 </div>
                 <div>
-                    <h3>
+                    <h3 class="donation-head-text">
                         You can also make a donation
                     </h3>
                     <h5>
@@ -256,7 +267,7 @@
                     </a>
                 </div>
             </div>
-            <img src="../../assets/images/footer-puppy.svg" alt="footer-puppy">
+            <img class="footer-puppy" src="../../assets/images/footer-puppy.svg" alt="footer-puppy">
         </div>
     </footer>
 </body>

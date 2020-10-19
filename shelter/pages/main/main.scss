@@ -286,10 +286,12 @@ h5 {
 .our-friends__card:hover {
     cursor: pointer;
     background: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .our-friends__arrow {
     @include flex-content;
+    background: $color-light-l;
     width: 3.25rem;
     height: 3.25rem;
     border: 0.125rem solid $primary-color;
@@ -492,7 +494,7 @@ footer {
 .footer__wrapper-questions-element {
     display: flex;
     align-items: center;
-    margin-top: 2.5rem;
+    margin-top: 2.35rem;
 }
 
 .footer__wrapper-questions-element h4 {
@@ -526,3 +528,388 @@ footer {
 a {
     text-decoration: none;
 }
+
+.burger, .our-friends-mob-arrow {
+    display: none;
+}
+
+.mob-arrow {
+    display: flex;
+}
+
+
+@media (max-width: 1279px) {
+    .wrapper {
+        max-width: 44.25rem;
+        padding-top: 1.9rem;
+    }
+
+    .main {
+        padding-top: 5.2rem;
+    }
+
+    .hero__image {        
+        width: 100%;
+        margin-left: 8.6875rem;
+    }
+
+    .content-section__inner {
+        margin-right: 0;
+    }
+
+    .hero__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__wrapper {
+        max-width: 35.5625rem;
+    }
+
+    .content-section__button {
+        margin: 0 auto;
+        margin-top: 2.55rem;
+        margin-bottom: 6.25rem;
+        height: 3.25rem;
+    }
+
+    .header-hero-wraper {
+        height: 72.8125rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 0rem 10.5625rem;
+    }
+
+    .main-block-first {
+        height: 65.5rem;
+    }
+
+    .about-img {
+        @include flex-content;
+    }
+
+    .about img {
+        margin: 5rem 0 0 0;
+    }
+
+    .about__paragraph {
+        margin-top: 5rem;
+    }
+
+    .about-wrapper-text {
+        width: 26.875rem;
+        margin: 0 auto;
+    }
+
+    .card-one {
+        margin: 0 2.5rem 0 0.75rem;
+    }
+
+    .card-two {
+        margin-right: 0.75rem;
+    }
+
+    .card-three {
+        display: none;
+    }
+
+    .our-friends__cards {
+        margin-bottom: 1.25rem
+    }
+
+    .help__items {
+        width: 39.375rem;
+    }
+
+    .help__items--element, .help__items--element:nth-child(5) {
+        margin-bottom: 1.5625rem;
+        margin-right: 3.75rem;
+        width: 10.625rem;
+    }
+
+    .help__items--element:nth-child(3n) {
+        margin-right: 0rem;
+    }
+
+    .help {
+        height: 48.6875rem;
+    }
+
+    .help__items--element:nth-child(6) img, .help__items--element:nth-child(7) img, .help__items--element:nth-child(8) img, .help__items--element:nth-child(9) img {
+        margin-top: 1.875rem;
+    }
+
+    .addition {
+        height: 48.9375rem;
+    }
+
+    .addition__wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .addition__wrapper .donation-dog {
+        padding-top: 3.75rem;
+        margin: 0;
+    }
+
+    .footer__wrapper {
+        height: 39.9375rem;
+        padding: 0.9375rem 1.875rem 0rem 1.875rem;
+        justify-content: center;
+    }
+
+    .footer__wrapper-questions {
+        margin-right: 3.75rem;
+    }
+
+    .footer-two {
+        margin-right: 0;
+    }
+
+    .footer-puppy {
+        position: absolute;
+        margin-top: 19.6875rem
+    }
+
+    .mobile-but {
+        margin-top: 2.66rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu, .card-two, .mob-arrow {
+        display: none;
+    }
+    
+    .burger {       
+        display: flex;
+        align-items: center;
+        margin-right: 53px;
+    }
+
+    .logo {
+        padding-left: 0.625rem;
+    }
+
+    .hero__content {
+        width: 100%;
+    }
+
+    .content-section__inner {
+        width: 18.75rem;
+        text-align: center;
+    }
+
+    .content-section__title {
+        font-size: 1.5625rem;
+        letter-spacing: 0.06em;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero__image {
+        height: 16.9375rem;
+        width: 16.25rem;
+        margin-left: 3.125rem;
+    }
+
+    .header-hero-wraper {
+        height: 51.4375rem;
+    }
+
+    .about-wrapper-text {
+        max-width: 18.75rem
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    .about__paragraph {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h3, .footer-header {
+        font-size: 1.5625rem;
+        text-align: center;
+    }
+
+    .about img {
+        width: 16.25rem;
+        margin: 2.625rem 0 0 0;
+        height: 22.0625rem;
+    }
+
+    .main-block-first {
+        margin-top: 2.625rem;
+        height: 100%;
+        padding-bottom: 2.625rem;
+    }
+
+    .about p {
+        width: 16.875rem;
+        margin: 0 auto;
+        margin-top: 1.5625rem;
+        text-align: justify;
+    }
+    
+    .about p:nth-child(3) {
+        margin-top: 1.375rem;
+    }
+
+    .card-one {
+        margin: 0 auto;
+    }
+
+    .our-friends__wrapper, .help, .addition__wrapper, .addition__wrapper .donation-dog {
+        padding-top: 2.625rem
+    }
+
+    .our-friends__cards, .content-section__button, .help__items {
+        margin-top: 2.625rem
+    }
+
+    .our-friends {
+        height: 49.4375rem;
+    }
+
+    .our-friends-mob-arrow {
+        @include flex-content;
+    }
+
+    .our-friends-mob-arrow .our-friends__arrow:nth-child(1) {
+        margin-right: 5rem;
+    }
+
+    .content-section__button {
+        line-height: 130%;
+    }
+
+    .help {      
+        max-width: 18.75rem;
+        height: 46.5625rem;
+    }
+
+    .help__items {
+        width: 18.125rem;
+    }
+
+    .help__items--element, .help__items--element:nth-child(5) {
+        margin-bottom: 1.875rem;
+        margin-right: 3.75rem;
+        width: 8.125rem;
+        height: 5.4375rem;
+    }
+
+    .help__items--element:nth-child(2n), .footer__wrapper-questions {
+        margin-right: 0rem;
+    }
+
+    .help__items--element:nth-child(1), .help__items--element:nth-child(2n+1) {
+        margin-right: 1.875rem;
+    }
+
+    h4 {
+        font-size: 0.9375rem;
+        line-height: 110%;
+    }
+
+    .help__items--element img {
+        width: 50px;
+        height: 50px;
+        margin-top: 0px;
+        margin-bottom: 1.3rem;
+    }
+
+    .help__items--element:nth-child(6) img, .help__items--element:nth-child(7) img, .help__items--element:nth-child(8) img, .help__items--element:nth-child(9) img {
+        margin-top: 0;
+    }
+
+    .help__items--element:nth-child(9) {
+        margin-right: 10rem;
+    }
+
+    .addition {
+        height: 33.875rem;
+    }
+
+    .addition__wrapper h3 {
+        width: 13.75rem;
+        margin: 0 auto;
+    }
+
+    .addition__wrapper h5 {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.9375rem;
+        line-height: 160%;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    .addition__number-cards {
+        width: 17.5625rem;
+        margin: 0 auto;
+    }
+
+    .addition__description {
+        width: 17.5rem;
+        text-align: justify;
+        margin: 0 auto;
+        margin-top: 1.25rem;
+    }
+
+    .donation-dog {
+        width: 16.25rem;
+    }
+
+    .our-friends__paragraph, .footer__wrapper {
+        max-width: 18.75rem;
+    }
+
+    .footer__wrapper {
+        height: 50.5625rem;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.875rem 0.625rem 0px 0.625rem;
+        margin: 0 auto;
+    }
+
+    .footer-puppy {
+        width: 16.25rem;
+        position: inherit;
+        margin-top: 0;
+    }
+
+    .footer__wrapper h3 {
+        max-width: 278px;
+        margin-top: 0;;
+    }
+
+    .footer__wrapper-questions-element h4 {
+        font-size: 1.25rem;
+        line-height: 115%;
+    }
+
+    .footer__wrapper-questions-element {
+        padding-left: 0.875rem;
+        align-items: center;
+    }
+
+    .footer-two {
+        margin-top: 0.55rem;
+    }
+
+    .visit, .addres {
+        padding-left: 0;
+    }
+
+    .visit {
+        margin-top: 2.5rem;
+    }
+}
+

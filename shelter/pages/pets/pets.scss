@@ -226,7 +226,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: 1.875rem 0rem 3.75rem 0rem;
 }
 
@@ -239,6 +239,7 @@ h5 {
 .our-friends__card:hover {
     cursor: pointer;
     background: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .our-friends__arrow {
@@ -355,7 +356,7 @@ footer {
 .footer__wrapper-questions-element {
     display: flex;
     align-items: center;
-    margin-top: 2.5rem;
+    margin-top: 2.35rem;
 }
 
 .footer__wrapper-questions-element h4 {
@@ -388,4 +389,137 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 1279px) {
+    .wrapper {
+        padding: 1.875rem;
+    }
+
+    .our-friends__wrapper {
+        padding: 5rem 5.875rem 4.75rem 5.875rem;
+    }
+
+    .our-friends__card:nth-child(7), .our-friends__card:nth-child(8) {
+        display: none;
+    }
+
+    .our-friends__cards {
+        margin-bottom: 2.5rem;
+        margin-top: 0;
+    }
+
+    .footer__wrapper {
+        height: 39.9375rem;
+        padding: 0.9375rem 1.875rem 0rem 1.875rem;
+        justify-content: center;
+    }
+
+    .footer__wrapper-questions {
+        margin-right: 3.75rem;
+    }
+
+    .footer-two {
+        margin-right: 0;
+    }
+
+    .footer-puppy {
+        position: absolute;
+        margin-top: 19.6875rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+
+    .wrapper {
+        align-items: center;
+        padding-left: 0.625rem;
+    }
+
+    .our-friends__card:nth-child(4), .our-friends__card:nth-child(5), .our-friends__card:nth-child(6) {
+        display: none;
+    }
+
+    .our-friends__wrapper {
+        padding: 2.625rem 1.5625rem;
+    }
+
+    h3 {
+        font-size: 1.5625rem;
+    }
+
+    .our-friends__cards {
+        margin-bottom: 2.625rem;
+        justify-content: center;
+    }
+
+    .our-friends__card {
+        margin-top: 2.625rem;
+    }
+
+    .but-our-friends, .our-friends__paragraph {
+        width: 18.75rem;
+    }
+
+    .our-friends__card:nth-child(2), .our-friends__card:nth-child(3) {
+        margin-top: 1.875rem;
+    }
+
+    .footer__wrapper {
+        height: 50.5625rem;
+        max-width: 18.75rem;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.875rem 0.625rem 0px 0.625rem;
+        margin: 0 auto;        
+    }
+
+    .footer__wrapper-questions {
+        margin-right: 0rem;
+    }
+
+    .footer__wrapper h3 {
+        max-width: 278px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    h3, .footer-header {
+        font-size: 1.5625rem;
+    }
+
+    .footer__wrapper-questions-element {
+        padding-left: 0.875rem;
+        align-items: center;
+    }
+
+    .footer-two {
+        margin-top: 0.55rem;
+    }
+
+    .visit {
+        margin-top: 2.5rem;
+    }
+
+    .visit, .addres {
+        padding-left: 0;
+    }
+
+    .footer__wrapper-questions-element h4 {
+        font-size: 1.25rem;
+        line-height: 115%;
+    }
+
+    .footer-puppy {
+        width: 16.25rem;
+        position: inherit;
+        margin-top: 0;
+    }
+
+    .burger {
+        padding-right: 1.25rem;
+    }
 }
