@@ -129,6 +129,11 @@
   margin-top: 42px;
 }
 
+.no-hover:hover {
+  color: #545454 !important;
+  cursor: auto !important;
+}
+
 .content-section__button:hover {
   background: #FDDCC4;
   cursor: pointer;
@@ -444,6 +449,7 @@ a {
   .our-friends__cards {
     margin-bottom: 2.5rem;
     margin-top: 0;
+    max-width: 36.25rem;
   }
   .footer__wrapper {
     height: 39.9375rem;
@@ -523,10 +529,17 @@ a {
     font-size: 1.5625rem;
   }
   .footer__wrapper-questions-element {
-    padding-left: 0.875rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .center-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer-two {
     margin-top: 0.55rem;
@@ -536,6 +549,8 @@ a {
   }
   .visit, .addres {
     padding-left: 0;
+    margin-left: -0.625rem;
+    max-width: 18.75rem;
   }
   .footer__wrapper-questions-element h4 {
     font-size: 1.25rem;

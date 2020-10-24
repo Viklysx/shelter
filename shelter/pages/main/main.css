@@ -106,6 +106,11 @@
   border-bottom: solid 3px #ffffff00;
 }
 
+.no-hover:hover {
+  color: #CDCDCD !important;
+  cursor: auto !important;
+}
+
 .list__link_active {
   border-bottom: solid 3px #F1CDB3;
 }
@@ -513,6 +518,7 @@ h5 {
 }
 
 .addition__number-cards:hover {
+  background: #FDDCC4;
   cursor: pointer;
 }
 
@@ -618,6 +624,9 @@ a {
 }
 
 @media (max-width: 1279px) {
+  .content-section__link {
+    text-align: center;
+  }
   .wrapper {
     max-width: 44.25rem;
     padding-top: 1.9rem;
@@ -940,16 +949,25 @@ a {
     line-height: 115%;
   }
   .footer__wrapper-questions-element {
-    padding-left: 0.875rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .center-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer-two {
     margin-top: 0.55rem;
   }
   .visit, .addres {
     padding-left: 0;
+    margin-left: -0.625rem;
+    max-width: 18.75rem;
   }
   .visit {
     margin-top: 2.5rem;

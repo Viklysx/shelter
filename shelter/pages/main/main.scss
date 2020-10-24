@@ -154,6 +154,11 @@ $color-primary-light: #FDDCC4;
     border-bottom: solid 3px #ffffff00;
 }
 
+.no-hover:hover {
+    color: $color-dark-s !important;
+    cursor: auto !important;
+}
+
 .list__link_active {   
     border-bottom: solid 3px $primary-color;
 }
@@ -449,6 +454,7 @@ h5 {
 }
 
 .addition__number-cards:hover {
+    background: #FDDCC4;
     cursor: pointer;
 }
 
@@ -539,6 +545,10 @@ a {
 
 
 @media (max-width: 1279px) {
+    .content-section__link {
+        text-align: center;
+    }
+
     .wrapper {
         max-width: 44.25rem;
         padding-top: 1.9rem;
@@ -896,8 +906,12 @@ a {
     }
 
     .footer__wrapper-questions-element {
-        padding-left: 0.875rem;
         align-items: center;
+    }
+
+    .center-footer {
+        display: flex;
+        justify-content: center;
     }
 
     .footer-two {
@@ -906,6 +920,8 @@ a {
 
     .visit, .addres {
         padding-left: 0;
+        margin-left: -0.625rem;
+        max-width: 18.75rem;
     }
 
     .visit {
