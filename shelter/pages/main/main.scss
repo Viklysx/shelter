@@ -18,6 +18,7 @@ $color-primary-light: #FDDCC4;
         size: 4.4rem;
         weight: 400;
     }
+
     line-height: 130%;
 }
 
@@ -28,6 +29,7 @@ $color-primary-light: #FDDCC4;
         size: 2.1875rem;
         weight: 400;
     }
+
     line-height: 130%;
     letter-spacing: 0.06em;
 }
@@ -39,6 +41,7 @@ $color-primary-light: #FDDCC4;
         size: 1.25rem;
         weight: 400;
     }
+
     line-height: 115%;
     letter-spacing: 0.06em;
 }
@@ -50,6 +53,7 @@ $color-primary-light: #FDDCC4;
         size: 0.9375rem;
         weight: 400;
     }
+
     line-height: 110%;
     letter-spacing: 0.06em;
     color: $color-dark-l;
@@ -66,6 +70,28 @@ $color-primary-light: #FDDCC4;
     justify-content: center;
 }
 
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: #{$transition};
+    -moz-transition: #{$transition};
+    -o-transition: #{$transition};
+    transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: #{$transition-delay};
+    -moz-transition-delay: #{$transition-delay};
+    -o-transition-delay: #{$transition-delay};
+    transition-delay: #{$transition-delay};
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -79,7 +105,8 @@ $color-primary-light: #FDDCC4;
     // width: 100vw; 
 }
 
-.wrapper, .hero__wrapper {
+.wrapper,
+.hero__wrapper {
     display: flex;
     margin: 0 auto;
     padding-top: 3.75rem;
@@ -95,6 +122,7 @@ $color-primary-light: #FDDCC4;
 .logo {
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .logo__title {
@@ -111,7 +139,7 @@ $color-primary-light: #FDDCC4;
     display: flex;
     justify-content: center;
     color: $color-light-xl;
-    font-size: 0.8125rem;   
+    font-size: 0.8125rem;
     letter-spacing: 0.1em;
     line-height: 110%;
     padding-top: 0.625rem;
@@ -159,7 +187,7 @@ $color-primary-light: #FDDCC4;
     cursor: auto !important;
 }
 
-.list__link_active {   
+.list__link_active {
     border-bottom: solid 3px $primary-color;
 }
 
@@ -198,7 +226,7 @@ $color-primary-light: #FDDCC4;
     color: $color-dark-s;
     margin-top: 2.625rem;
     font-family: Arial;
-    font-weight: 400;   
+    font-weight: 400;
     font-size: 0.9375rem;
     line-height: 160%;
 }
@@ -272,7 +300,7 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 0rem 6.25rem 0rem;  
+    padding: 5rem 0rem 6.25rem 0rem;
     height: 54.8125rem;
 }
 
@@ -304,7 +332,8 @@ h5 {
     border-radius: 6.25rem;
 }
 
-.our-friends__arrow:hover, .our-friends__card--button:hover {
+.our-friends__arrow:hover,
+.our-friends__card--button:hover {
     cursor: pointer;
     background: $color-primary-light;
     border-color: $color-primary-light;
@@ -325,7 +354,7 @@ h5 {
 
 .our-friends__card img {
     border-radius: 0.5625rem 0.5625rem 0rem 0rem;
-    margin-bottom: 1.875rem;   
+    margin-bottom: 1.875rem;
 }
 
 .our-friends__card--text {
@@ -357,11 +386,13 @@ h5 {
     transform: rotate(-180deg);
 }
 
-.card-one, .card-two {
+.card-one,
+.card-two {
     margin-right: 5.625rem;
 }
 
-.card-three, .card-two {
+.card-three,
+.card-two {
     margin-left: 0rem;
 }
 
@@ -376,7 +407,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     height: 38.1875rem;
-    padding: 5rem 0rem 6.25rem 0rem; 
+    padding: 5rem 0rem 6.25rem 0rem;
 }
 
 .help h3 {
@@ -480,21 +511,21 @@ footer {
 
 .footer__wrapper {
     @include wrapper;
-    padding-top: 2.5rem;   
+    padding-top: 2.5rem;
     height: 21.875rem;
     display: flex;
     justify-content: space-between;
 }
 
 .footer__wrapper h3 {
-    color: $color-light-xl; 
-    margin-top: 1rem;   
+    color: $color-light-xl;
+    margin-top: 1rem;
 }
 
 .footer__wrapper-questions {
     display: flex;
-    flex-direction: column;  
-    margin-right: 10rem;  
+    flex-direction: column;
+    margin-right: 10rem;
 }
 
 .footer__wrapper-questions-element {
@@ -535,12 +566,30 @@ a {
     text-decoration: none;
 }
 
-.burger, .our-friends-mob-arrow {
+.burger,
+.our-friends-mob-arrow {
     display: none;
 }
 
 .mob-arrow {
     display: flex;
+}
+
+.burger-menu {
+    background-color: $color-dark-3xl;
+    position: absolute;
+    width: 20rem;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    padding: 1.875rem 0.625rem;
+    @include transform(translateX(100%));
+    @include transition(transform 0.55s);
+
+    &.show {
+        @include transform(translateX(0px));
+    }
 }
 
 
@@ -558,7 +607,7 @@ a {
         padding-top: 5.2rem;
     }
 
-    .hero__image {        
+    .hero__image {
         width: 100%;
         margin-left: 8.6875rem;
     }
@@ -633,7 +682,8 @@ a {
         width: 39.375rem;
     }
 
-    .help__items--element, .help__items--element:nth-child(5) {
+    .help__items--element,
+    .help__items--element:nth-child(5) {
         margin-bottom: 1.5625rem;
         margin-right: 3.75rem;
         width: 10.625rem;
@@ -647,7 +697,10 @@ a {
         height: 48.6875rem;
     }
 
-    .help__items--element:nth-child(6) img, .help__items--element:nth-child(7) img, .help__items--element:nth-child(8) img, .help__items--element:nth-child(9) img {
+    .help__items--element:nth-child(6) img,
+    .help__items--element:nth-child(7) img,
+    .help__items--element:nth-child(8) img,
+    .help__items--element:nth-child(9) img {
         margin-top: 1.875rem;
     }
 
@@ -689,18 +742,26 @@ a {
 }
 
 @media (max-width: 767px) {
-    .menu, .card-two, .mob-arrow {
-        display: none;
-    }
-    
-    .burger {       
-        display: flex;
-        align-items: center;
-        margin-right: 53px;
+
+    .wrapper {
+        max-width: 16.0625rem;
     }
 
-    .logo {
-        padding-left: 0.625rem;
+    .menu,
+    .card-two,
+    .mob-arrow {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        @include transition(transform 0.55s);
+
+        &.rotate {
+            transform: rotate(90deg);          
+        }
     }
 
     .hero__content {
@@ -742,7 +803,8 @@ a {
         margin: 0 auto;
     }
 
-    h3, .footer-header {
+    h3,
+    .footer-header {
         font-size: 1.5625rem;
         text-align: center;
     }
@@ -765,7 +827,7 @@ a {
         margin-top: 1.5625rem;
         text-align: justify;
     }
-    
+
     .about p:nth-child(3) {
         margin-top: 1.375rem;
     }
@@ -774,11 +836,16 @@ a {
         margin: 0 auto;
     }
 
-    .our-friends__wrapper, .help, .addition__wrapper, .addition__wrapper .donation-dog {
+    .our-friends__wrapper,
+    .help,
+    .addition__wrapper,
+    .addition__wrapper .donation-dog {
         padding-top: 2.625rem
     }
 
-    .our-friends__cards, .content-section__button, .help__items {
+    .our-friends__cards,
+    .content-section__button,
+    .help__items {
         margin-top: 2.625rem
     }
 
@@ -798,7 +865,7 @@ a {
         line-height: 130%;
     }
 
-    .help {      
+    .help {
         max-width: 18.75rem;
         height: 46.5625rem;
     }
@@ -807,18 +874,21 @@ a {
         width: 18.125rem;
     }
 
-    .help__items--element, .help__items--element:nth-child(5) {
+    .help__items--element,
+    .help__items--element:nth-child(5) {
         margin-bottom: 1.875rem;
         margin-right: 3.75rem;
         width: 8.125rem;
         height: 5.4375rem;
     }
 
-    .help__items--element:nth-child(2n), .footer__wrapper-questions {
+    .help__items--element:nth-child(2n),
+    .footer__wrapper-questions {
         margin-right: 0rem;
     }
 
-    .help__items--element:nth-child(1), .help__items--element:nth-child(2n+1) {
+    .help__items--element:nth-child(1),
+    .help__items--element:nth-child(2n+1) {
         margin-right: 1.875rem;
     }
 
@@ -834,7 +904,10 @@ a {
         margin-bottom: 1.3rem;
     }
 
-    .help__items--element:nth-child(6) img, .help__items--element:nth-child(7) img, .help__items--element:nth-child(8) img, .help__items--element:nth-child(9) img {
+    .help__items--element:nth-child(6) img,
+    .help__items--element:nth-child(7) img,
+    .help__items--element:nth-child(8) img,
+    .help__items--element:nth-child(9) img {
         margin-top: 0;
     }
 
@@ -877,7 +950,8 @@ a {
         width: 16.25rem;
     }
 
-    .our-friends__paragraph, .footer__wrapper {
+    .our-friends__paragraph,
+    .footer__wrapper {
         max-width: 18.75rem;
     }
 
@@ -897,7 +971,8 @@ a {
 
     .footer__wrapper h3 {
         max-width: 278px;
-        margin-top: 0;;
+        margin-top: 0;
+        ;
     }
 
     .footer__wrapper-questions-element h4 {
@@ -918,7 +993,8 @@ a {
         margin-top: 0.55rem;
     }
 
-    .visit, .addres {
+    .visit,
+    .addres {
         padding-left: 0;
         margin-left: -0.625rem;
         max-width: 18.75rem;
@@ -928,4 +1004,3 @@ a {
         margin-top: 2.5rem;
     }
 }
-
