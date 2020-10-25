@@ -577,7 +577,7 @@ a {
 
 .burger-menu {
     background-color: $color-dark-3xl;
-    position: absolute;
+    position: fixed;
     width: 20rem;
     height: 100vh;
     z-index: 9;
@@ -590,6 +590,45 @@ a {
     &.show {
         @include transform(translateX(0px));
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height:100%;
+    @include transition(all 0.3s ease-in-out);
+    background-color: $color-dark-3xl;
+    opacity: 0;
+    visibility: hidden;
+    
+    &.show {
+      opacity: 0.8;
+      visibility: visible;
+    }
+  }
+
+.menu-burger {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-burger {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9.875rem;
+    align-items: center;
+}
+
+.list-burger a {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.our-friends__cards-slide {
+    display: flex;
 }
 
 

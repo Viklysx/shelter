@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="burger" id="menuSlide">
+                <div class="burger">
                     <img src="../../assets/images/burger.png">
                 </div>
             </div>
@@ -111,31 +111,33 @@
                     </h3>
                 </div>
                 <div class="our-friends__cards">
-                    <button class="our-friends__arrow mob-arrow">
+                    <button class="our-friends__arrow mob-arrow" id="butLeft">
                         <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
                     </button>
-                    <div class="our-friends__card card-one">
-                        <img src="../../assets/images/pets-katrine.svg" alt="pets-katrine">
-                        <p class="our-friends__card--text">Katrine</p>
-                        <button type="button" class="our-friends__card--button">
-                            Learn more
-                        </button>
+                    <div class="our-friends__cards-slide">
+                        <div class="our-friends__card">
+                            <img src="../../assets/images/pets-katrine.svg" alt="pets-katrine">
+                            <p class="our-friends__card--text">Katrine</p>
+                            <button type="button" class="our-friends__card--button">
+                                Learn more
+                            </button>
+                        </div>
+                        <div class="our-friends__card">
+                            <img src="../../assets/images/pets-jennifer.svg" alt="pets-jennifer">
+                            <p class="our-friends__card--text">Jennifer</p>
+                            <button type="button" class="our-friends__card--button">
+                                Learn more
+                            </button>
+                        </div>
+                        <div class="our-friends__card">
+                            <img src="../../assets/images/pets-woody.svg" alt="pets-woody">
+                            <p class="our-friends__card--text">Woody</p>
+                            <button type="button" class="our-friends__card--button">
+                                Learn more
+                            </button>
+                        </div>
                     </div>
-                    <div class="our-friends__card card-two">
-                        <img src="../../assets/images/pets-jennifer.svg" alt="pets-jennifer">
-                        <p class="our-friends__card--text">Jennifer</p>
-                        <button type="button" class="our-friends__card--button">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="our-friends__card card-three">
-                        <img src="../../assets/images/pets-woody.svg" alt="pets-woody">
-                        <p class="our-friends__card--text">Woody</p>
-                        <button type="button" class="our-friends__card--button">
-                            Learn more
-                        </button>
-                    </div>
-                    <button class="our-friends__arrow rotate mob-arrow">
+                    <button class="our-friends__arrow rotate mob-arrow" id="butRight">
                         <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
                     </button>
                 </div>
@@ -272,8 +274,24 @@
         </div>
     </footer>
     <div class="burger-menu">
-        
+        <nav class="menu-burger">
+            <ul class="list list-burger">
+                <li class="list__item close-menu">
+                    <a class="list__link list__link_active">About the shelter</a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link list__link_disabled" href="../pets/index.html">Our pets</a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link list__link_disabled no-hover">Help the shelter</a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link list__link_disabled no-hover">Contacts </a>
+                </li>
+            </ul>
+        </nav>
     </div>
+    <div class="overlay"></div>
     <script src="script.js"></script>
 </body>
 
