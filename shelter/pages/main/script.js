@@ -39,76 +39,98 @@ let arrowRight = document.getElementById('butRight');
 const request = new XMLHttpRequest();
 fetch('../../pets.json').then(res => res.json()).then(list => {
     pets = list;
-    pets.forEach((element, i) => {       
-        if (i > 2) {
-            petMass.push(pets[i]);
-        }
-        else startMass.push(pets[i]);
-    });
-    let shuffled = petMass
-        .map((a) => ({sort: Math.random(), value: a}))
+    let shuffled = pets
+        .map((a) => ({
+            sort: Math.random(),
+            value: a
+        }))
         .sort((a, b) => a.sort - b.sort)
-        .map((a) => a.value);
-    finalPets = startMass.concat(shuffled);
+        .map((a) => a.value);   
+    finalPets = shuffled.concat(shuffled[1]);
+    // console.log(finalPets);
     let divMain = document.createElement('div');
-    divMain.className = 'our-friends__cards-slide';      
-    divMain.style.display = 'none';
-        
-        for (let i = 3; i <= 5; i++) {
-            
-            let div = document.createElement('div');
-            div.className = 'our-friends__card';
-            let blockSlide = 
-                `<img src="${finalPets[i].img}" alt="pets-${finalPets[i].name}">
+    let divMainTwo = document.createElement('div');
+    let divMainFinal = document.createElement('div');
+    divMainTwo.style.display = 'none';
+    divMainFinal.style.display = 'none';
+    divMain.className = 'our-friends__cards-slide';
+    divMainTwo.className = 'our-friends__cards-slide';
+    divMainFinal.className = 'our-friends__cards-slide';
+    for (let i=0; i <= 2; i++) {
+        let div = document.createElement('div');
+        div.className = 'our-friends__card';
+        let blockSlide =
+            `<img src="${finalPets[i].img}" alt="pets-${finalPets[i].name}">
                 <p class="our-friends__card--text">${finalPets[i].name}</p>
                 <button type="button" class="our-friends__card--button">
                     Learn more
                 </button>`;
-            div.innerHTML = blockSlide;
-            divMain.append(div);           
-        }  
-    arrowRight.before(divMain);
+        div.innerHTML = blockSlide;
+        divMain.append(div);
+    }
+    for (let i=3; i <= 5; i++) {
+        let div = document.createElement('div');
+        div.className = 'our-friends__card';
+        let blockSlide =
+            `<img src="${finalPets[i].img}" alt="pets-${finalPets[i].name}">
+                <p class="our-friends__card--text">${finalPets[i].name}</p>
+                <button type="button" class="our-friends__card--button">
+                    Learn more
+                </button>`;
+        div.innerHTML = blockSlide;
+        divMainTwo.append(div);
+    }
+    for (let i=6; i <= 8; i++) {
+        let div = document.createElement('div');
+        div.className = 'our-friends__card';
+        let blockSlide =
+            `<img src="${finalPets[i].img}" alt="pets-${finalPets[i].name}">
+                <p class="our-friends__card--text">${finalPets[i].name}</p>
+                <button type="button" class="our-friends__card--button">
+                    Learn more
+                </button>`;
+        div.innerHTML = blockSlide;
+        divMainFinal.append(div);
+    }
+    arrowRight.before(divMain, divMainTwo, divMainFinal);
+    document.querySelector("#butRight").addEventListener('click', (e) => {
+        plusSlide();
+    });
+    
+    document.querySelector("#butLeft").addEventListener('click', (e) => {
+        minusSlide();
+    });
 })
 
 let currentPage = 0;
 let cards = document.querySelectorAll('.our-friends__card');
-
-/* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);
 
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
 function plusSlide() {
     showSlides(slideIndex += 1);
 }
 
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
 function minusSlide() {
-    showSlides(slideIndex -= 1);  
+    showSlides(slideIndex -= 1);
 }
 
-/* Устанавливает текущий слайд */
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-/* Основная функция слайдера */
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("our-friends__cards-slide");
     if (n > slides.length) {
-      slideIndex = 1;
+        slideIndex = 1;
     }
     if (n < 1) {
         slideIndex = slides.length;
     }
-    for (i = 3; i < slides.length; i++) {
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "flex";
 }
-
-document.querySelector("#butRight").addEventListener('click', (e) => {
-    plusSlide();
-});
 
