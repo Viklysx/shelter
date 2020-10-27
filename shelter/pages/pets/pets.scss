@@ -396,6 +396,10 @@ a {
     text-decoration: none;
 }
 
+.burger {
+    display: none;
+}
+
 @media (max-width: 1279px) {
     .wrapper {
         padding: 1.875rem;
@@ -436,6 +440,10 @@ a {
 }
 
 @media (max-width: 767px) {
+
+    .burger {
+        display: block;
+    }
     .menu {
         display: none;
     }
